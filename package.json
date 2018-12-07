@@ -1,0 +1,34 @@
+{
+  "name": "redis-kits",
+  "version": "0.0.1",
+  "description": "Some useful kits of Redis. ",
+  "main": "./lib/index.js",
+  "author": "fuchuan",
+  "repository": {
+    "url": "https://github.com/weifuchuan/redis-kits",
+    "type": "github"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "publish": "yarn run build && yarn run doc && npm publish",
+    "doc": "typedoc --name redis-kits --target ES5 --exclude \"(lib)|(node_modules)\" --out ./doc ./src"
+  },
+  "dependencies": {
+    "ioredis": "^4.2.0",
+    "rxjs": "^6.3.3"
+  },
+  "devDependencies": {
+    "@types/ioredis": "^4.0.4",
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.12",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4",
+    "typedoc": "^0.13.0",
+    "typescript": "^3.1.6"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  }
+}
